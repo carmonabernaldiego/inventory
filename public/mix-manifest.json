@@ -1,0 +1,13 @@
+{
+    "/js/invoice.js": "/js/invoice.js",
+    "/js/stock.js": "/js/stock.js",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/user.js": "/js/user.js",
+    "/js/role.js": "/js/role.js",
+    "/js/product.js": "/js/product.js",
+    "/js/customer.js": "/js/customer.js",
+    "/js/category.js": "/js/category.js",
+    "/js/report.js": "/js/report.js",
+    "/js/dashboard.js": "/js/dashboard.js",
+    "/js/app.js": "/js/app.js"
+}

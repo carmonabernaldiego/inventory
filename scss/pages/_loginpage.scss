@@ -1,0 +1,43 @@
+﻿.login-page {
+    background: url('../images/bg.jpg')center no-repeat fixed;
+    background-size: cover;
+    padding-left: 0;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    .login-box {
+        .msg {
+            color: #555;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 25px;
+        }
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #00BCD4;
+        }
+        .logo {
+            a {
+                font-size: 36px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                color: #fff;
+            }
+            img {
+                width: 300px;
+            }
+            small {
+                display: block;
+                width: 100%;
+                text-align: center;
+                color: #fff;
+                margin-top: -5px;
+            }
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+    }
+}

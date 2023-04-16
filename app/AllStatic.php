@@ -1,0 +1,1 @@
+AllStatic.php
