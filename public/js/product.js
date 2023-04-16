@@ -39217,27 +39217,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -39288,6 +39267,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           name: response.data.product_name,
           details: response.data.details
         };
+        $('#mySelect2Update').val(response.data.category_id).trigger('change');
       });
     },
     updateProduct: function updateProduct(id) {
@@ -39375,6 +39355,7 @@ var render = function() {
                                 }
                               ],
                               staticClass: "form-control select2",
+                              attrs: { id: "mySelect2Update" },
                               on: {
                                 change: function($event) {
                                   var $$selectedVal = Array.prototype.filter

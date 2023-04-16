@@ -20,15 +20,11 @@
                       <i class="material-icons">palette</i>
                     </span>
                     <div class="form-line">
-                      <select
-                        class="form-control select2"
-                        v-model="product.category"
-                        v-select="product.category"
-                        
-                      >
+                      <select class="form-control select2" v-model="product.category" v-select="product.category"
+                        id="mySelect2Update">
                         <option value>Selecciona una categoría</option>
 
-                        <option v-for="(value,index) in cat" :value="value.id">{{ value.name }}</option>
+                        <option v-for="(value, index) in cat" :value="value.id">{{ value.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -40,12 +36,7 @@
                       <i class="material-icons">palette</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control date"
-                        placeholder="Nombre"
-                        v-model="product.name"
-                      />
+                      <input type="text" class="form-control date" placeholder="Nombre" v-model="product.name" />
                     </div>
                   </div>
                 </div>
@@ -56,12 +47,7 @@
                       <i class="material-icons">line_style</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control date"
-                        placeholder="Detalles"
-                        v-model="product.details"
-                      />
+                      <input type="text" class="form-control date" placeholder="Detalles" v-model="product.details" />
                     </div>
                   </div>
                 </div>
@@ -70,17 +56,10 @@
           </div>
           <div class="modal-footer">
             <br />
-            <button
-              @click="updateProduct(product.id)"
-              type="button"
-              class="btn btn-success waves-effect"
-            >Actualizar</button>
-            <button
-              @click="closeModal()"
-              type="button"
-              class="btn btn-default waves-effect"
-              data-dismiss="modal"
-            >Cancelar</button>
+            <button @click="updateProduct(product.id)" type="button"
+              class="btn btn-success waves-effect">Actualizar</button>
+            <button @click="closeModal()" type="button" class="btn btn-default waves-effect"
+              data-dismiss="modal">Cancelar</button>
           </div>
         </div>
       </div>
@@ -127,6 +106,8 @@ export default {
     });
   },
 
+
+
   methods: {
     editProduct(id) {
       axios
@@ -139,6 +120,7 @@ export default {
             name: response.data.product_name,
             details: response.data.details,
           };
+          $('#mySelect2Update').val(response.data.category_id).trigger('change');
         });
     },
     updateProduct(id) {
