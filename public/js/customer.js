@@ -38942,7 +38942,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("home")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("map")])
     ])
   }
 ]
@@ -39624,7 +39624,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("home")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("map")])
     ])
   }
 ]

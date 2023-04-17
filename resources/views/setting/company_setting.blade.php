@@ -1,10 +1,10 @@
 @extends('include.master')
 
 
-@section('title','Inventory | Setting')
+@section('title','Inventory | Configuración')
 
 
-@section('page-title','Setting')
+@section('page-title','Configuración')
 
 
 @section('content')
@@ -18,7 +18,7 @@
 			<div class="header">
 				<h2>
 					
-					Modificar Información de la Empresa
+					Información de la empresa
 					
 				</h2>
 			</div>
@@ -51,36 +51,36 @@
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
-                                    <i class="material-icons">palette</i>
+                                    <i class="material-icons">store</i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" value="{{ $company->name }}" class="form-control" name="name" placeholder="Company Name">
+                                    <input type="text" value="{{ $company->name }}" class="form-control" name="name" placeholder="Nombre de la empresa">
                                 </div>
                             </div>
                         </div>
 
-						<div class="col-md-6">
-                                <p>Dirección de la empresa</p>
-                            <div class="input-group">
-                                
-                                <span class="input-group-addon">
-                                    <i class="material-icons">palette</i>
-                                </span>
-                                <div class="form-line">
-                                    <input type="text" value="{{ $company->address }}" class="form-control" name="address" placeholder="Company Address">
-                                </div>
-                            </div>
-                        </div>
-                        
                         <div class="col-md-6">
                                 <p>Teléfono de la empresa</p>
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
-                                    <i class="material-icons">palette</i>
+                                    <i class="material-icons">phone</i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" value="{{ $company->phone }}" class="form-control" name="phone" placeholder="Company Phone">
+                                    <input type="text" value="{{ $company->phone }}" class="form-control" name="phone" placeholder="Teléfono de la empresa">
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="col-md-12">
+                                <p>Dirección de la empresa</p>
+                            <div class="input-group">
+                                
+                                <span class="input-group-addon">
+                                    <i class="material-icons">map</i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" value="{{ $company->address }}" class="form-control" name="address" placeholder="Dirección de la empresa">
                                 </div>
                             </div>
                         </div>
@@ -96,12 +96,9 @@
 
 			</div>
 
-
 		</div>
 	</div>
 </div>
-
-
 
 
 @endsection

@@ -1,10 +1,10 @@
 @extends('include.master')
 
 
-@section('title','Inventory | Password Change')
+@section('title','Inventory | Configuración')
 
 
-@section('page-title','Password Change')
+@section('page-title','Configuración')
 
 
 @section('content')
@@ -18,7 +18,7 @@
 			<div class="header">
 				<h2>
 					
-                   Change Password					
+                   Cambiar la contraseña					
 				</h2>
 			</div>
 
@@ -45,41 +45,41 @@
                     {{ csrf_field() }}
 					
 					<div class="row">
-						<div class="col-md-4 col-md-offset-4">
+						<div class="col-md-12">
                            
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
-                                    <i class="material-icons">palette</i>
+                                    <i class="material-icons">password</i>
                                 </span>
                                 <div class="form-line">
                                     <input type="password" 
                                      class="form-control"
-                                     name="old_password" placeholder="Enter Your Old Password">
+                                     name="old_password" placeholder="Ingresá tu contraseña actual">
                                 </div>
                             </div>
 
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
-                                    <i class="material-icons">palette</i>
+                                    <i class="material-icons">lock</i>
                                 </span>
                                 <div class="form-line">
                                     <input type="password" 
                                      class="form-control"
-                                     name="password" placeholder="Enter New Password">
+                                     name="password" placeholder="Ingresá tu nueva contraseña">
                                 </div>
                             </div>
 
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
-                                    <i class="material-icons">palette</i>
+                                    <i class="material-icons">lock_reset</i>
                                 </span>
                                 <div class="form-line">
                                     <input type="password" 
                                      class="form-control"
-                                     name="password_confirmation" placeholder="Confirm Password">
+                                     name="password_confirmation" placeholder="Reingresá tu nueva contraseña">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
 
 
 					<div class="row text-center">
-						<button type="submit" class="btn bg-teal">Update</button>
+						<button type="submit" class="btn bg-teal">Actualizar</button>
 					</div>
 
 

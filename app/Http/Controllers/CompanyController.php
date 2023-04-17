@@ -50,7 +50,7 @@ class CompanyController extends Controller
          $company->address = $request->address;
          $company->phone = $request->phone;
          $company->update();
-        \Session::flash('message','Company Information Updated');
+        \Session::flash('message','Información de la empresa actualizada');
          return redirect()->back();
     }
 

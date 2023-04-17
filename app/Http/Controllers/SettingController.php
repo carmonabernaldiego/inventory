@@ -56,7 +56,7 @@ class SettingController extends Controller
 
             $user->update();
 
-            Session::flash('message','Password Changed Successfully');
+            Session::flash('message','Configuración de contraseñad Successfully');
 
             return redirect()->back();
 

@@ -51,7 +51,7 @@
                 <div class="col-md-12">
                   <div class="input-group">
                     <span class="input-group-addon">
-                      <i class="material-icons">home</i>
+                      <i class="material-icons">map</i>
                     </span>
                     <div class="form-line">
                       <input type="text" class="form-control date" placeholder="Dirección" v-model="customer.address" />
