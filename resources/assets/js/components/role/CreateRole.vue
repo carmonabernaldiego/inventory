@@ -1,12 +1,11 @@
 <template>
-	
 	<div class="wrap">
-		
+
 		<div class="modal fade" id="create-category" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="defaultModalLabel">Add Role</h4>
+						<h4 class="modal-title" id="defaultModalLabel">Rol nuevo</h4>
 					</div>
 					<div class="modal-body">
 						<div class="alert alert-danger" v-if="errors">
@@ -19,75 +18,74 @@
 								<div class="col-md-12">
 									<div class="input-group">
 										<span class="input-group-addon">
-											<i class="material-icons">palette</i>
+											<i class="material-icons">admin_panel_settings</i>
 										</span>
 										<div class="form-line">
-											<input type="text" class="form-control date" placeholder="Role Name" v-model="role.role_name">
+											<input type="text" class="form-control date" placeholder="Nombre" v-model="role.role_name">
 										</div>
 									</div>
-								</div>        
-
-
 								</div>
 
-						
+
+							</div>
+
+
 						</form>
 
 					</div>
 					<div class="modal-footer">
 						<br>
-						<button @click="createCategory" type="button" class="btn btn-success waves-effect">SAVE</button>
-						<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button>
+						<button @click="createCategory" type="button" class="btn btn-success waves-effect">Guardar</button>
+						<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancelar</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
 	</div>
-
 </template>
 
 <script>
 
-	import {EventBus} from '../../vue-asset';
-	import mixin from '../../mixin';
+import { EventBus } from '../../vue-asset';
+import mixin from '../../mixin';
 
 
-	export default {
-     
-      mixins : [mixin],
-     
-		data(){
+export default {
 
-			return {
+	mixins: [mixin],
 
-				role : {
+	data() {
 
-					role_name : '',
+		return {
 
-				},
+			role: {
 
-				errors : null 
+				role_name: '',
 
+			},
 
-			}
-
-		},
-
-		methods : {
+			errors: null
 
 
-			createCategory(){
+		}
 
-				axios.post(base_url+'role',this.role)
+	},
+
+	methods: {
+
+
+		createCategory() {
+
+			axios.post(base_url + 'role', this.role)
 
 				.then(response => {
 
 					$('#create-category').modal('hide');
 
-					this.role = {'role_name':''};
+					this.role = { 'role_name': '' };
 					this.errors = null;
-					EventBus.$emit('role-created',response.data);
+					EventBus.$emit('role-created', response.data);
 
 					// this.showMessage(response.data);
 
@@ -96,24 +94,24 @@
 				})
 				.catch(err => {
 
-					if(err.response){
+					if (err.response) {
 
 						this.errors = err.response.data.errors;
 					}
 
 				})
 
-			},
-
 		},
 
-  // end of method section 
+	},
+
+	// end of method section 
 
 
-  created(){
+	created() {
 
 
-  },
+	},
 
 
 

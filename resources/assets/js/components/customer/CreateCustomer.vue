@@ -64,7 +64,7 @@
           <div class="modal-footer">
             <br>
             <button @click="createCustomer" type="button" class="btn btn-success waves-effect">Guardar</button>
-            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancelar</button>
           </div>
         </div>
       </div>

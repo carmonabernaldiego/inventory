@@ -65,7 +65,7 @@
             <br>
             <button @click="updateCustomer" type="button" class="btn btn-success waves-effect">Actualizar</button>
             <button @click="resetForm()" type="button" class="btn btn-default waves-effect"
-              data-dismiss="modal">Cerrar</button>
+              data-dismiss="modal">Cancelar</button>
           </div>
         </div>
       </div>

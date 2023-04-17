@@ -1,10 +1,10 @@
 @extends('include.master')
 
 
-@section('title','Inventory | User')
+@section('title','Inventory | Usuarios')
 
 
-@section('page-title','User')
+@section('page-title','Usuarios')
 
 
 @section('content')
@@ -28,7 +28,7 @@
                           
                           <h2>
                           	 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-user">
-                                <i class="glyphicon glyphicon-plus"></i> Create User
+                                Usuario nuevo
                              </button>
                           </h2>
                         </div>

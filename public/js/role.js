@@ -38309,8 +38309,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -38318,53 +38316,53 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-				mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
+	mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
 
-				data: function data() {
+	data: function data() {
 
-								return {
+		return {
 
-												role: {
+			role: {
 
-																role_name: ''
+				role_name: ''
 
-												},
+			},
 
-												errors: null
+			errors: null
 
-								};
-				},
-
-
-				methods: {
-								createCategory: function createCategory() {
-												var _this = this;
-
-												axios.post(base_url + 'role', this.role).then(function (response) {
-
-																$('#create-category').modal('hide');
-
-																_this.role = { 'role_name': '' };
-																_this.errors = null;
-																__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', response.data);
-
-																// this.showMessage(response.data);
-
-																_this.successALert(response.data);
-												}).catch(function (err) {
-
-																if (err.response) {
-
-																				_this.errors = err.response.data.errors;
-																}
-												});
-								}
-				},
-
-				// end of method section 
+		};
+	},
 
 
-				created: function created() {}
+	methods: {
+		createCategory: function createCategory() {
+			var _this = this;
+
+			axios.post(base_url + 'role', this.role).then(function (response) {
+
+				$('#create-category').modal('hide');
+
+				_this.role = { 'role_name': '' };
+				_this.errors = null;
+				__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', response.data);
+
+				// this.showMessage(response.data);
+
+				_this.successALert(response.data);
+			}).catch(function (err) {
+
+				if (err.response) {
+
+					_this.errors = err.response.data.errors;
+				}
+			});
+		}
+	},
+
+	// end of method section 
+
+
+	created: function created() {}
 });
 
 /***/ }),
@@ -38420,7 +38418,7 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control date",
-                            attrs: { type: "text", placeholder: "Role Name" },
+                            attrs: { type: "text", placeholder: "Nombre" },
                             domProps: { value: _vm.role.role_name },
                             on: {
                               input: function($event) {
@@ -38452,7 +38450,7 @@ var render = function() {
                     attrs: { type: "button" },
                     on: { click: _vm.createCategory }
                   },
-                  [_vm._v("SAVE")]
+                  [_vm._v("Guardar")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -38461,7 +38459,7 @@ var render = function() {
                     staticClass: "btn btn-default waves-effect",
                     attrs: { type: "button", "data-dismiss": "modal" }
                   },
-                  [_vm._v("Cerrar")]
+                  [_vm._v("Cancelar")]
                 )
               ])
             ])
@@ -38480,7 +38478,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Add Role")]
+        [_vm._v("Rol nuevo")]
       )
     ])
   },
@@ -38489,7 +38487,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("palette")])
+      _c("i", { staticClass: "material-icons" }, [
+        _vm._v("admin_panel_settings")
+      ])
     ])
   }
 ]
@@ -38627,6 +38627,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -38637,75 +38640,76 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-  mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
+		mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
 
-  components: {
+		components: {
 
-    'update-role': __WEBPACK_IMPORTED_MODULE_2__UpdateRole_vue___default.a,
-    'assign-role': __WEBPACK_IMPORTED_MODULE_3__AssignRole_vue___default.a
+				'update-role': __WEBPACK_IMPORTED_MODULE_2__UpdateRole_vue___default.a,
+				'assign-role': __WEBPACK_IMPORTED_MODULE_3__AssignRole_vue___default.a
 
-  },
+		},
 
-  data: function data() {
+		data: function data() {
 
-    return {
+				return {
 
-      roles: []
+						roles: []
 
-    };
-  },
-  created: function created() {
+				};
+		},
+		created: function created() {
 
-    var _this = this;
-    this.getData();
+				var _this = this;
+				this.getData();
 
-    __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('role-created', function () {
-      // window.history.pushState({}, null, location.pathname);
-      _this.getData();
-    });
-  },
+				__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('role-created', function () {
+						// window.history.pushState({}, null, location.pathname);
+						_this.getData();
+				});
+		},
 
 
-  methods: {
-    getData: function getData() {
-      var _this2 = this;
+		methods: {
+				getData: function getData() {
+						var _this2 = this;
 
-      axios.get(base_url + 'role-list').then(function (response) {
+						axios.get(base_url + 'role-list').then(function (response) {
 
-        _this2.roles = response.data;
-      });
-    },
-    perMission: function perMission(id) {
+								_this2.roles = response.data;
+						});
+				},
+				perMission: function perMission(id) {
 
-      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('assign-permission', id);
-    },
-    editRole: function editRole(id) {
+						__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('assign-permission', id);
+				},
+				editRole: function editRole(id) {
 
-      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-edit', id);
-    },
-    deleteRole: function deleteRole(id) {
-      var _this3 = this;
+						__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-edit', id);
+				},
+				deleteRole: function deleteRole(id) {
+						var _this3 = this;
 
-      Swal({
-        title: '¿Estás seguro?',
-        text: "¡No podrás revertir esto!",
-        type: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: '¡Sí, eliminar!'
-      }, function () {}).then(function (result) {
-        if (result.value) {
+						Swal({
+								title: '¿Estás seguro?',
+								text: "¡No podrás revertir esto!",
+								type: 'warning',
+								showCancelButton: true,
+								confirmButtonColor: '#3085d6',
+								cancelButtonColor: '#d33',
+								confirmButtonText: '¡Sí, eliminar!',
+								cancelButtonText: 'Cancelar'
+						}, function () {}).then(function (result) {
+								if (result.value) {
 
-          axios.get(base_url + 'role/delete/' + id).then(function (res) {
+										axios.get(base_url + 'role/delete/' + id).then(function (res) {
 
-            __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
-            _this3.successAlert(res.data);
-          });
-        }
-      });
-    }
-  }
+												__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
+												_this3.successAlert(res.data);
+										});
+								}
+						});
+				}
+		}
 
 });
 
@@ -38810,7 +38814,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -38818,83 +38821,83 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-  name: 'update-role',
+	name: 'update-role',
 
-  mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
+	mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
 
-  data: function data() {
+	data: function data() {
 
-    return {
+		return {
 
-      role: {
+			role: {
 
-        id: 0,
-        role_name: ''
+				id: 0,
+				role_name: ''
 
-      },
+			},
 
-      errors: null
+			errors: null
 
-    };
-  },
-  created: function created() {
+		};
+	},
+	created: function created() {
 
-    var vm = this;
+		var vm = this;
 
-    __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('role-edit', function (id) {
+		__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('role-edit', function (id) {
 
-      vm.role.id = id;
+			vm.role.id = id;
 
-      vm.editRole(id);
+			vm.editRole(id);
 
-      $('#update-category').modal('show');
-    });
+			$('#update-category').modal('show');
+		});
 
-    $('#update-category').on('hidden.bs.modal', function () {
-      vm.closeModal();
-    });
-  },
+		$('#update-category').on('hidden.bs.modal', function () {
+			vm.closeModal();
+		});
+	},
 
 
-  methods: {
-    editRole: function editRole(id) {
-      var _this = this;
+	methods: {
+		editRole: function editRole(id) {
+			var _this = this;
 
-      axios.get(base_url + 'role/' + id + '/edit').then(function (response) {
+			axios.get(base_url + 'role/' + id + '/edit').then(function (response) {
 
-        _this.role = {
-          id: response.data.id,
-          role_name: response.data.role_name
-        };
-      });
-    },
-    updateRole: function updateRole(id) {
-      var _this2 = this;
+				_this.role = {
+					id: response.data.id,
+					role_name: response.data.role_name
+				};
+			});
+		},
+		updateRole: function updateRole(id) {
+			var _this2 = this;
 
-      axios.post(base_url + 'role/update/' + id, this.role).then(function (res) {
+			axios.post(base_url + 'role/update/' + id, this.role).then(function (res) {
 
-        if (res.data.status == 'success') {
+				if (res.data.status == 'success') {
 
-          _this2.successALert(res.data);
-          __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
-          _this2.closeModal();
-          $('#update-category').modal('hide');
-        }
-      }).catch(function (err) {
+					_this2.successALert(res.data);
+					__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
+					_this2.closeModal();
+					$('#update-category').modal('hide');
+				}
+			}).catch(function (err) {
 
-        if (err.response) {
+				if (err.response) {
 
-          _this2.errors = err.response.data.errors;
-        }
-      });
-    },
-    closeModal: function closeModal() {
+					_this2.errors = err.response.data.errors;
+				}
+			});
+		},
+		closeModal: function closeModal() {
 
-      this.errors = null;
-      this.role = { 'id': 0, 'role_name': '' };
-      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
-    }
-  }
+			this.errors = null;
+			this.role = { 'id': 0, 'role_name': '' };
+			__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
+		}
+	}
 
 });
 
@@ -38951,10 +38954,7 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control date",
-                            attrs: {
-                              type: "text",
-                              placeholder: "category Name"
-                            },
+                            attrs: { type: "text", placeholder: "Nombre" },
                             domProps: { value: _vm.role.role_name },
                             on: {
                               input: function($event) {
@@ -38990,7 +38990,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Update")]
+                  [_vm._v("Actualizar")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -39004,7 +39004,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Cerrar")]
+                  [_vm._v("Cancelar")]
                 )
               ])
             ])
@@ -39023,7 +39023,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Update Role Information")]
+        [_vm._v("Actualizar rol")]
       )
     ])
   },
@@ -39032,7 +39032,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("palette")])
+      _c("i", { staticClass: "material-icons" }, [
+        _vm._v("admin_panel_settings")
+      ])
     ])
   }
 ]
@@ -39168,6 +39170,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -39175,87 +39180,87 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-				name: 'assign-role',
+	name: 'assign-role',
 
-				mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
+	mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
 
-				data: function data() {
+	data: function data() {
 
-								return {
+		return {
 
-												role: {
+			role: {
 
-																id: 0,
-																role_name: '',
-																menus: []
-												},
+				id: 0,
+				role_name: '',
+				menus: []
+			},
 
-												errors: null
+			errors: null
 
-								};
-				},
-				created: function created() {
+		};
+	},
+	created: function created() {
 
-								var vm = this;
+		var vm = this;
 
-								__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('assign-permission', function (id) {
+		__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('assign-permission', function (id) {
 
-												vm.role.id = id;
+			vm.role.id = id;
 
-												vm.RoleInfo(id);
-												vm.getMenus(id);
+			vm.RoleInfo(id);
+			vm.getMenus(id);
 
-												$('#assign-role').modal('show');
-								});
+			$('#assign-role').modal('show');
+		});
 
-								$('#assign-role').on('hidden.bs.modal', function () {
-												vm.closeModal();
-								});
-				},
+		$('#assign-role').on('hidden.bs.modal', function () {
+			vm.closeModal();
+		});
+	},
 
 
-				methods: {
-								RoleInfo: function RoleInfo(id) {
-												var _this = this;
+	methods: {
+		RoleInfo: function RoleInfo(id) {
+			var _this = this;
 
-												axios.get(base_url + 'role/' + id + '/edit').then(function (response) {
-																_this.role.id = response.data.id;
-																_this.role.role_name = response.data.role_name;
-												});
-								},
-								getMenus: function getMenus(id) {
-												var _this2 = this;
+			axios.get(base_url + 'role/' + id + '/edit').then(function (response) {
+				_this.role.id = response.data.id;
+				_this.role.role_name = response.data.role_name;
+			});
+		},
+		getMenus: function getMenus(id) {
+			var _this2 = this;
 
-												axios.get(base_url + 'role/' + id).then(function (response) {
+			axios.get(base_url + 'role/' + id).then(function (response) {
 
-																_this2.role.menus = response.data;
-												});
-								},
-								AssignRole: function AssignRole() {
-												var _this3 = this;
+				_this2.role.menus = response.data;
+			});
+		},
+		AssignRole: function AssignRole() {
+			var _this3 = this;
 
-												axios.post(base_url + 'permission', this.role).then(function (res) {
+			axios.post(base_url + 'permission', this.role).then(function (res) {
 
-																console.log(res);
+				console.log(res);
 
-																if (res.data.status == 'success') {
-																				_this3.successALert(res.data);
-																				__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
-																				_this3.closeModal();
-																				$('#assign-role').modal('hide');
-																}
-												}).catch(function (err) {
-
-																if (err.response) {
-
-																				_this3.errors = err.response.data.errors;
-																}
-												});
-								},
-								closeModal: function closeModal() {
-												__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
-								}
+				if (res.data.status == 'success') {
+					_this3.successALert(res.data);
+					__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
+					_this3.closeModal();
+					$('#assign-role').modal('hide');
 				}
+			}).catch(function (err) {
+
+				if (err.response) {
+
+					_this3.errors = err.response.data.errors;
+				}
+			});
+		},
+		closeModal: function closeModal() {
+			__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('role-created', 1);
+		}
+	}
 
 });
 
@@ -39288,7 +39293,7 @@ var render = function() {
                     attrs: { id: "defaultModalLabel" }
                   },
                   [
-                    _vm._v("Permission of "),
+                    _vm._v("Permiso de "),
                     _c("span", { staticStyle: { color: "teal" } }, [
                       _vm._v(_vm._s(_vm.role.role_name))
                     ])
@@ -39483,7 +39488,7 @@ var render = function() {
                     attrs: { type: "button" },
                     on: { click: _vm.AssignRole }
                   },
-                  [_vm._v("Update")]
+                  [_vm._v("Actualizar")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -39497,7 +39502,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Cerrar")]
+                  [_vm._v("Cancelar")]
                 )
               ])
             ])
@@ -39622,13 +39627,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("Role Name")]),
+        _c("th", [_vm._v("Nombre")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Assign Permission")]),
+        _c("th", [_vm._v("Otorgar permiso")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Edit")]),
+        _c("th", [_vm._v("Editar")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Delete")])
+        _c("th", [_vm._v("Eliminar")])
       ])
     ])
   }

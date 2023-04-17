@@ -60,7 +60,7 @@ class RoleController extends Controller
 
         $role->save();
 
-        return response()->json(['status'=>'success','message'=>'Role Saved']); 
+        return response()->json(['status'=>'success','message'=>'Rol creado']); 
     }
 
     /**
@@ -235,7 +235,7 @@ class RoleController extends Controller
 
         $role->save();
 
-        return response()->json(['status'=>'success','message'=>'Role Updated']);
+        return response()->json(['status'=>'success','message'=>'Rol actualizado']);
         }
         catch(\Exception $e)
         {

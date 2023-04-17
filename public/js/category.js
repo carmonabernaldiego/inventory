@@ -38942,7 +38942,7 @@ var render = function() {
       { staticClass: "body" },
       [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "col-md-12" }, [
             _c("input", {
               directives: [
                 {

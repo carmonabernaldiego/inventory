@@ -82,7 +82,7 @@ class UserManageController extends Controller
             $user->branch_id = 1;
             $user->save();
 
-            return response()->json(['status' => 'success', 'message' => 'User Successfully Created !']);
+            return response()->json(['status' => 'success', 'message' => 'Usuario creado']);
 
         } catch (\Exception $e) {
             // return $e;
@@ -139,7 +139,7 @@ class UserManageController extends Controller
             $user->role_id = $request->role;
             $user->update();
 
-            return response()->json(['status' => 'success', 'message' => 'User Data Updated !']);
+            return response()->json(['status' => 'success', 'message' => 'Usuario actualizado']);
 
         } catch (\Exception $e) {
             // return $e;

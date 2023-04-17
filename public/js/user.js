@@ -38658,73 +38658,74 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-				mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
+	mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin__["a" /* default */]],
 
-				data: function data() {
+	data: function data() {
 
-								return {
+		return {
 
-												user: {
+			user: {
 
-																name: '',
-																email: '',
-																password: '',
-																password_confirmation: '',
-																role: ''
+				name: '',
+				email: '',
+				password: '',
+				password_confirmation: '',
+				role: ''
 
-												},
+			},
 
-												role_list: [],
+			role_list: [],
 
-												errors: null
+			errors: null
 
-								};
-				},
-				mounted: function mounted() {
+		};
+	},
+	mounted: function mounted() {
 
-								this.roleList();
-				},
-
-
-				methods: {
-								createuser: function createuser() {
-												var _this = this;
-
-												axios.post(base_url + 'user', this.user).then(function (response) {
-
-																$('#create-user').modal('hide');
-
-																_this.user = {
-																				'name': '',
-																				'email': '',
-																				'password': '',
-																				'password_confirmation': '',
-																				'role': '' };
-
-																_this.errors = null;
-																__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('user-created', response.data);
-																_this.successALert(response.data);
-												}).catch(function (err) {
-
-																if (err.response) {
-
-																				_this.errors = err.response.data.errors;
-																}
-												});
-								},
-								roleList: function roleList() {
-												var _this2 = this;
-
-												axios.get(base_url + 'role-list').then(function (response) {
-																_this2.role_list = response.data;
-												});
-								}
-				},
-
-				// end of method section 
+		this.roleList();
+	},
 
 
-				created: function created() {}
+	methods: {
+		createuser: function createuser() {
+			var _this = this;
+
+			axios.post(base_url + 'user', this.user).then(function (response) {
+
+				$('#create-user').modal('hide');
+
+				_this.user = {
+					'name': '',
+					'email': '',
+					'password': '',
+					'password_confirmation': '',
+					'role': ''
+				};
+
+				_this.errors = null;
+				__WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('user-created', response.data);
+				_this.successALert(response.data);
+			}).catch(function (err) {
+
+				if (err.response) {
+
+					_this.errors = err.response.data.errors;
+				}
+			});
+		},
+		roleList: function roleList() {
+			var _this2 = this;
+
+			axios.get(base_url + 'role-list').then(function (response) {
+				_this2.role_list = response.data;
+			});
+		}
+	},
+
+	// end of method section 
+
+
+	created: function created() {}
 });
 
 /***/ }),
@@ -38790,7 +38791,7 @@ var render = function() {
                                 }
                               ],
                               staticClass: "form-control date",
-                              attrs: { type: "text", placeholder: "User Name" },
+                              attrs: { type: "text", placeholder: "Nombre" },
                               domProps: { value: _vm.user.name },
                               on: {
                                 input: function($event) {
@@ -38826,7 +38827,7 @@ var render = function() {
                               staticClass: "form-control date",
                               attrs: {
                                 type: "email",
-                                placeholder: "User Email"
+                                placeholder: "Correo electrónico"
                               },
                               domProps: { value: _vm.user.email },
                               on: {
@@ -38863,7 +38864,7 @@ var render = function() {
                               staticClass: "form-control date",
                               attrs: {
                                 type: "password",
-                                placeholder: "Enter Password"
+                                placeholder: "Ingresá tu contraseña"
                               },
                               domProps: { value: _vm.user.password },
                               on: {
@@ -38900,7 +38901,7 @@ var render = function() {
                               staticClass: "form-control date",
                               attrs: {
                                 type: "password",
-                                placeholder: "Confirm Password"
+                                placeholder: "Reingresá tu contraseña"
                               },
                               domProps: {
                                 value: _vm.user.password_confirmation
@@ -38922,7 +38923,7 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-md-6" }, [
+                      _c("div", { staticClass: "col-md-12" }, [
                         _c("div", { staticClass: "input-group" }, [
                           _vm._m(5),
                           _vm._v(" "),
@@ -38962,7 +38963,7 @@ var render = function() {
                               },
                               [
                                 _c("option", { attrs: { value: "" } }, [
-                                  _vm._v("Select Role")
+                                  _vm._v("Selecciona un rol")
                                 ]),
                                 _vm._v(" "),
                                 _vm._l(_vm.role_list, function(value) {
@@ -39000,7 +39001,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Add User")]
+        [_vm._v("Usuario nuevo")]
       )
     ])
   },
@@ -39057,7 +39058,7 @@ var staticRenderFns = [
           staticClass: "btn btn-success waves-effect",
           attrs: { type: "submit" }
         },
-        [_vm._v("SAVE")]
+        [_vm._v("Guardar")]
       ),
       _vm._v(" "),
       _c(
@@ -39066,7 +39067,7 @@ var staticRenderFns = [
           staticClass: "btn btn-default waves-effect",
           attrs: { type: "button", "data-dismiss": "modal" }
         },
-        [_vm._v("Cerrar")]
+        [_vm._v("Cancelar")]
       )
     ])
   }
@@ -39203,24 +39204,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -39289,7 +39272,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "¡Sí, eliminar!"
+        confirmButtonText: "¡Sí, eliminar!",
+        cancelButtonText: "Cancelar"
       }, function () {}).then(function (result) {
         if (result.value) {
           axios.get(base_url + "user/delete/" + id).then(function (res) {
@@ -39363,16 +39347,6 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vue_asset__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixin__ = __webpack_require__(6);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -39586,7 +39560,7 @@ var render = function() {
                                 }
                               ],
                               staticClass: "form-control date",
-                              attrs: { type: "text", placeholder: "User Name" },
+                              attrs: { type: "text", placeholder: "Nombre" },
                               domProps: { value: _vm.user.name },
                               on: {
                                 input: function($event) {
@@ -39622,7 +39596,7 @@ var render = function() {
                               staticClass: "form-control date",
                               attrs: {
                                 type: "email",
-                                placeholder: "User Email"
+                                placeholder: "Correo electrónico"
                               },
                               domProps: { value: _vm.user.email },
                               on: {
@@ -39642,7 +39616,7 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-md-6" }, [
+                      _c("div", { staticClass: "col-md-12" }, [
                         _c("div", { staticClass: "input-group" }, [
                           _vm._m(3),
                           _vm._v(" "),
@@ -39682,7 +39656,7 @@ var render = function() {
                               },
                               [
                                 _c("option", { attrs: { value: "" } }, [
-                                  _vm._v("Select Role")
+                                  _vm._v("Selecciona un rol")
                                 ]),
                                 _vm._v(" "),
                                 _vm._l(_vm.role_list, function(value) {
@@ -39720,7 +39694,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Add User")]
+        [_vm._v("Actualizar usuario")]
       )
     ])
   },
@@ -39761,7 +39735,7 @@ var staticRenderFns = [
           staticClass: "btn btn-success waves-effect",
           attrs: { type: "submit" }
         },
-        [_vm._v("SAVE")]
+        [_vm._v("Actualizar")]
       ),
       _vm._v(" "),
       _c(
@@ -39770,7 +39744,7 @@ var staticRenderFns = [
           staticClass: "btn btn-default waves-effect",
           attrs: { type: "button", "data-dismiss": "modal" }
         },
-        [_vm._v("Cerrar")]
+        [_vm._v("Cancelar")]
       )
     ])
   }
@@ -39798,7 +39772,7 @@ var render = function() {
       { staticClass: "body" },
       [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
+          _c("div", { staticClass: "col-md-6" }, [
             _c("input", {
               directives: [
                 {
@@ -39827,7 +39801,7 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
+          _c("div", { staticClass: "col-md-6" }, [
             _c("input", {
               directives: [
                 {
@@ -39946,15 +39920,15 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [_vm._v("Name")]),
+        _c("th", [_vm._v("Nombre")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Email")]),
+        _c("th", [_vm._v("Correo electrónico")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Role")]),
+        _c("th", [_vm._v("Rol")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Edit")]),
+        _c("th", [_vm._v("Editar")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Delete")])
+        _c("th", [_vm._v("Eliminar")])
       ])
     ])
   }

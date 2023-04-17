@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="body">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <input type="text" class="form-control" v-on:keyup="getData" placeholder="Buscar por nombre" name
             v-model="name" />
         </div>

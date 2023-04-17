@@ -3,66 +3,48 @@
 
     <div class="body">
       <div class="row">
-        <div class="col-md-4">
-          <input
-            type="text"
-            class="form-control"
-            v-on:keyup="getData"
-            placeholder="Buscar por nombre"
-            name
-            v-model="name"
-          >
+        <div class="col-md-6">
+          <input type="text" class="form-control" v-on:keyup="getData" placeholder="Buscar por nombre" name
+            v-model="name">
         </div>
-        <div class="col-md-4">
-          <input
-            type="text"
-            class="form-control"
-            v-on:keyup="getData"
-            placeholder="Buscar por correo"
-            name
-            v-model="email"
-          >
+        <div class="col-md-6">
+          <input type="text" class="form-control" v-on:keyup="getData" placeholder="Buscar por correo" name
+            v-model="email">
         </div>
         <div class="col-md-4"></div>
       </div>
 
-      
-       <div class="loading" v-if="isLoading">
-                    <h2 style="text-align:center">Cargando.......</h2>
-        </div>
+
+      <div class="loading" v-if="isLoading">
+        <h2 style="text-align:center">Cargando.......</h2>
+      </div>
 
       <div class="table-responsive" v-else>
         <table class="table table-condensed table-hover">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              <th>Nombre</th>
+              <th>Correo electrónico</th>
+              <th>Rol</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(value,index) in users.data" v-bind:key="index">
+            <tr v-for="(value, index) in users.data" v-bind:key="index">
               <td>{{ value.name }}</td>
               <td>{{ value.email }}</td>
               <td>{{ value.role.role_name }}</td>
               <td>
-                <button
-                  @click="editUser(value.id)"
-                  type="button"
-                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="editUser(value.id)" type="button"
+                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">edit</i>
                 </button>
               </td>
 
               <td>
-                <button
-                  @click="deleteUser(value.id)"
-                  type="button"
-                  class="btn bg-pink btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="deleteUser(value.id)" type="button"
+                  class="btn bg-pink btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">delete</i>
                 </button>
               </td>
@@ -71,7 +53,7 @@
         </table>
       </div>
 
-       <pagination :pageData="users"></pagination>
+      <pagination :pageData="users"></pagination>
 
       <div class="row">
         <update-user></update-user>
@@ -100,14 +82,14 @@ export default {
       users: [],
       name: "",
       email: "",
-      isLoading : true,
+      isLoading: true,
     };
   },
   created() {
     var _this = this;
     this.getData();
 
-    EventBus.$on("user-created", function() {
+    EventBus.$on("user-created", function () {
       _this.getData();
     });
   },
@@ -118,12 +100,12 @@ export default {
       axios
         .get(
           base_url +
-            "user-list?page=" +
-            page +
-            "&name=" +
-            this.name +
-            "&email=" +
-            this.email
+          "user-list?page=" +
+          page +
+          "&name=" +
+          this.name +
+          "&email=" +
+          this.email
         )
         .then(response => {
           this.users = response.data;
@@ -151,9 +133,10 @@ export default {
           showCancelButton: true,
           confirmButtonColor: "#3085d6",
           cancelButtonColor: "#d33",
-          confirmButtonText: "¡Sí, eliminar!"
+          confirmButtonText: "¡Sí, eliminar!",
+          cancelButtonText: "Cancelar"
         },
-        () => {}
+        () => { }
       ).then(result => {
         if (result.value) {
           axios.get(base_url + "user/delete/" + id).then(res => {
@@ -171,7 +154,7 @@ export default {
   },
 
   computed: {
-    
+
   }
 };
 </script>

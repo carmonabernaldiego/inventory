@@ -38890,7 +38890,7 @@ var render = function() {
                     staticClass: "btn btn-default waves-effect",
                     attrs: { type: "button", "data-dismiss": "modal" }
                   },
-                  [_vm._v("Cerrar")]
+                  [_vm._v("Cancelar")]
                 )
               ])
             ])
@@ -39572,7 +39572,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Cerrar")]
+                  [_vm._v("Cancelar")]
                 )
               ])
             ])

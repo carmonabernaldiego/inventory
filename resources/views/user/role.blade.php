@@ -1,10 +1,10 @@
 @extends('include.master')
 
 
-@section('title','Inventory | Role')
+@section('title','Inventory | Gestión de roles')
 
 
-@section('page-title','Role')
+@section('page-title','Gestión de roles')
 
 
 @section('content')
@@ -28,7 +28,7 @@
                           
                           <h2>
                           	 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-category">
-                                <i class="glyphicon glyphicon-plus"></i> Create Role
+                                Rol nuevo
                              </button>
                           </h2>
                         </div>
