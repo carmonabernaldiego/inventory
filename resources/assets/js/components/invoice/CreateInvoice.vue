@@ -156,7 +156,7 @@
                     <th>#</th>
                     <th>Categoría</th>
                     <th>Producto</th>
-                    <th>Chalan</th>
+                    <th>Comprobante</th>
                     <th>Cantidad</th>
                     <th>Precio</th>
                     <th>Descuento</th>
@@ -216,7 +216,7 @@
                     <td>
                       <select class="form-control" v-model="invoice.product[index].chalan_id"
                         @change="findStockDetails(index)">
-                        <option value>Seleccionar Chalan</option>
+                        <option value>Seleccionar Comprobante</option>
                         <option v-for="(ch, ch_index) in vl.stocks" :value="ch.id">
                           {{
                             ch.chalan_no }}. qty({{ ch.current_quantity }})

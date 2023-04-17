@@ -40813,15 +40813,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -40829,56 +40820,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['category', 'user', 'customer', 'vendor'],
-  components: {
+	props: ['category', 'user', 'customer', 'vendor'],
+	components: {
 
-    'vuejs-datepicker': __WEBPACK_IMPORTED_MODULE_1_vuejs_datepicker__["a" /* default */]
+		'vuejs-datepicker': __WEBPACK_IMPORTED_MODULE_1_vuejs_datepicker__["a" /* default */]
 
-  },
-  mixins: [__WEBPACK_IMPORTED_MODULE_2__mixin_js__["a" /* default */]],
+	},
+	mixins: [__WEBPACK_IMPORTED_MODULE_2__mixin_js__["a" /* default */]],
 
-  data: function data() {
+	data: function data() {
 
-    return {
+		return {
 
-      report_type: '',
-      category_id: '',
-      product_id: '',
-      chalan_id: '',
+			report_type: '',
+			category_id: '',
+			product_id: '',
+			chalan_id: '',
 
-      product: [],
-      chalan: []
+			product: [],
+			chalan: []
 
-    };
-  },
+		};
+	},
 
 
-  methods: {
-    findProduct: function findProduct() {
-      var _this = this;
+	methods: {
+		findProduct: function findProduct() {
+			var _this = this;
 
-      this.product = [];
-      axios.get(base_url + 'category/product/' + this.category_id).then(function (response) {
+			this.product = [];
+			axios.get(base_url + 'category/product/' + this.category_id).then(function (response) {
 
-        _this.product = response.data;
-      });
-    },
-    findStock: function findStock() {
-      var _this2 = this;
+				_this.product = response.data;
+			});
+		},
+		findStock: function findStock() {
+			var _this2 = this;
 
-      this.chalan = [];
-      axios.get(base_url + 'chalan-list/chalan/' + this.product_id).then(function (response) {
+			this.chalan = [];
+			axios.get(base_url + 'chalan-list/chalan/' + this.product_id).then(function (response) {
 
-        _this2.chalan = response.data;
-      });
-    }
-  },
+				_this2.chalan = response.data;
+			});
+		}
+	},
 
-  computed: {
-    isEnable: function isEnable() {
-      return this.report_type === 'invoice' || this.report_type === 'due';
-    }
-  }
+	computed: {
+		isEnable: function isEnable() {
+			return this.report_type === 'invoice' || this.report_type === 'due';
+		}
+	}
 
 });
 
@@ -41160,7 +41151,7 @@ var render = function() {
                 },
                 [
                   _c("option", { attrs: { value: "" } }, [
-                    _vm._v("Chose Chalan (optional)")
+                    _vm._v("Chose Comprobante (optional)")
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.chalan, function(ch) {

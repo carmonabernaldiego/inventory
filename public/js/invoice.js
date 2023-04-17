@@ -42625,7 +42625,7 @@ var render = function() {
                                 },
                                 [
                                   _c("option", { attrs: { value: "" } }, [
-                                    _vm._v("Seleccionar Chalan")
+                                    _vm._v("Seleccionar Comprobante")
                                   ]),
                                   _vm._v(" "),
                                   _vm._l(vl.stocks, function(ch, ch_index) {
@@ -43227,7 +43227,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Producto")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Chalan")]),
+        _c("th", [_vm._v("Comprobante")]),
         _vm._v(" "),
         _c("th", [_vm._v("Cantidad")]),
         _vm._v(" "),
@@ -43661,7 +43661,7 @@ exports = module.exports = __webpack_require__(179)(false);
 
 
 // module
-exports.push([module.i, "\n.requiredField{\r\n\r\n  color: red;\n}\r\n", ""]);
+exports.push([module.i, "\n.requiredField {\r\n\r\n  color: red;\n}", ""]);
 
 // exports
 
@@ -43675,6 +43675,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vue_asset__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixin__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuejs_datepicker__ = __webpack_require__(177);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -44227,7 +44234,7 @@ var render = function() {
       [
         _c("div", { staticClass: "header" }, [
           _c("h2", { staticClass: "pull-left" }, [
-            _vm._v("\n          Update Invoice\n\n        ")
+            _vm._v("\n        Update Invoice\n\n      ")
           ]),
           _vm._v(" "),
           _c("h2", { staticClass: "pull-right" }, [
@@ -44310,9 +44317,9 @@ var render = function() {
                               { domProps: { value: customer.id } },
                               [
                                 _vm._v(
-                                  "\n                      " +
+                                  "\n                    " +
                                     _vm._s(customer.customer_name) +
-                                    "\n                    "
+                                    "\n                  "
                                 )
                               ]
                             )
@@ -44404,13 +44411,13 @@ var render = function() {
                         _vm.errors.hasOwnProperty("invoice_date")
                           ? _c("span", { staticClass: "requiredField" }, [
                               _vm._v(
-                                "\n              " +
+                                "\n                  " +
                                   _vm._s(
                                     _vm.errors.hasOwnProperty("invoice_date")
                                       ? _vm.errors.invoice_date[0]
                                       : ""
                                   ) +
-                                  "\n            "
+                                  "\n                "
                               )
                             ])
                           : _vm._e()
@@ -44643,7 +44650,7 @@ var render = function() {
                                 },
                                 [
                                   _c("option", { attrs: { value: "" } }, [
-                                    _vm._v("Select Chalan")
+                                    _vm._v("Select Comprobante")
                                   ]),
                                   _vm._v(" "),
                                   _vm._l(vl.stocks, function(ch) {
@@ -45086,7 +45093,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Product")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Chalan")]),
+        _c("th", [_vm._v("Comprobante")]),
         _vm._v(" "),
         _c("th", [_vm._v("QTY")]),
         _vm._v(" "),

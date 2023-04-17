@@ -57,7 +57,7 @@
 							</tr>
 							<tr>
 								<th>Product</th>
-								<th>Chalan</th>
+								<th>Comprobante</th>
 								<th>Sold Date</th>
 								<th>Customer</th>
 								<th>Seller</th>

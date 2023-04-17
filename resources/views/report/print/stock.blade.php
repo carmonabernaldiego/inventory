@@ -30,7 +30,7 @@
 							<tr>
 								<th>Category</th>
 								<th>Product</th>
-								<th>Chalan</th>
+								<th>Comprobante</th>
 								<th>Fecha</th>
 								<th>Entry By</th>
 								<th>Buying Price</th>

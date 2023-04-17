@@ -8,42 +8,27 @@
 
       <div class="row">
         <div class="col-md-4">
-          <select
-            class="form-control select2"
-            data-live-serach="true"
-            @change="getProduct()"
-            v-model="category"
-            v-select="category"
-          >
+          <select class="form-control select2" data-live-serach="true" @change="getProduct()" v-model="category"
+            v-select="category">
             <option value>Todas la categorías</option>
 
-            <option v-for="(cat,index) in categorys" :value="cat.id">{{ cat.name }}</option>
+            <option v-for="(cat, index) in categorys" :value="cat.id">{{ cat.name }}</option>
           </select>
         </div>
         <div class="col-md-4">
-          <select
-            class="form-control select2"
-            data-live-serach="true"
-            @change="getData(1)"
-            v-model="product"
-            v-select="product"
-          >
+          <select class="form-control select2" data-live-serach="true" @change="getData(1)" v-model="product"
+            v-select="product">
             <option value>Todos los productos</option>
 
-            <option v-for="(pd,index) in products" :value="pd.id">{{ pd.product_name }}</option>
+            <option v-for="(pd, index) in products" :value="pd.id">{{ pd.product_name }}</option>
           </select>
         </div>
         <div class="col-md-4">
-          <select
-            class="form-control select2"
-            data-live-serach="true"
-            @change="getData(1)"
-            v-model="vendor"
-            v-select="vendor"
-          >
+          <select class="form-control select2" data-live-serach="true" @change="getData(1)" v-model="vendor"
+            v-select="vendor">
             <option value>Todos los proveedores</option>
 
-            <option v-for="(vd,index) in vendors" :value="vd.id">{{ vd.name }}</option>
+            <option v-for="(vd, index) in vendors" :value="vd.id">{{ vd.name }}</option>
           </select>
         </div>
       </div>
@@ -59,7 +44,7 @@
               <th>Categoría</th>
               <th>Producto</th>
               <th>Proveedor</th>
-              <th>Chalan</th>
+              <th>Comprobante</th>
               <th>Existencia inicial</th>
               <th>Existencia actual</th>
               <th>Precio de compra</th>
@@ -72,7 +57,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(value,index) in stocks.data">
+            <tr v-for="(value, index) in stocks.data">
               <td>{{ value.category.name }}</td>
               <td>{{ value.product.product_name }}</td>
               <td>{{ value.vendor.name }}</td>
@@ -84,29 +69,20 @@
               <td>{{ value.user.name }}</td>
               <td>{{ value.created_at | moment('LL') }}</td>
               <td>
-                <button
-                  @click="editQty(value.id,value.category_id)"
-                  type="button"
-                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="editQty(value.id, value.category_id)" type="button"
+                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">add</i>
                 </button>
               </td>
               <td>
-                <button
-                  @click="editStock(value.id,value.category_id)"
-                  type="button"
-                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="editStock(value.id, value.category_id)" type="button"
+                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">edit</i>
                 </button>
               </td>
               <td>
-                <button
-                  @click="deleteStock(value.id)"
-                  type="button"
-                  class="btn bg-pink btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="deleteStock(value.id)" type="button"
+                  class="btn bg-pink btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">delete</i>
                 </button>
               </td>
@@ -169,14 +145,14 @@ export default {
       axios
         .get(
           base_url +
-            "stock-list?page=" +
-            page +
-            "&product=" +
-            this.product +
-            "&category=" +
-            this.category +
-            "&vendor=" +
-            this.vendor
+          "stock-list?page=" +
+          page +
+          "&product=" +
+          this.product +
+          "&category=" +
+          this.category +
+          "&vendor=" +
+          this.vendor
         )
         .then((response) => {
           // console.log(response.data);
@@ -230,7 +206,7 @@ export default {
           cancelButtonText: "Cancelar",
           confirmButtonText: "¡Sí, eliminar!",
         },
-        () => {}
+        () => { }
       ).then((result) => {
         if (result.value) {
           axios.get(base_url + "stock/delete/" + id).then((res) => {

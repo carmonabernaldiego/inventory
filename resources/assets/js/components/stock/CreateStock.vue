@@ -20,18 +20,11 @@
                       <i class="material-icons">palette</i>
                     </span>
                     <div class="form-line">
-                      <select
-                        class="form-control select2"
-                        v-model="stock.category"
-                        v-select="stock.category"
-                        @change="findProduct()"
-                      >
+                      <select class="form-control select2" v-model="stock.category" v-select="stock.category"
+                        @change="findProduct()">
                         <option value>Selecciona una categoría</option>
 
-                        <option
-                          v-for="(value,index) in categorys"
-                          :value="value.id"
-                        >{{ value.name }}</option>
+                        <option v-for="(value, index) in categorys" :value="value.id">{{ value.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -43,17 +36,10 @@
                       <i class="material-icons">shopping_bag</i>
                     </span>
                     <div class="form-line">
-                      <select
-                        class="form-control select2"
-                        v-model="stock.product"
-                        v-select="stock.product"
-                      >
+                      <select class="form-control select2" v-model="stock.product" v-select="stock.product">
                         <option value="">Selecciona un producto</option>
 
-                        <option
-                          v-for="(value,index) in products"
-                          :value="value.id"
-                        >{{ value.product_name }}</option>
+                        <option v-for="(value, index) in products" :value="value.id">{{ value.product_name }}</option>
                       </select>
                     </div>
                   </div>
@@ -65,14 +51,10 @@
                       <i class="material-icons">supervisor_account</i>
                     </span>
                     <div class="form-line">
-                      <select
-                        class="form-control select2"
-                        v-model="stock.vendor"
-                        v-select="stock.vendor"
-                      >
+                      <select class="form-control select2" v-model="stock.vendor" v-select="stock.vendor">
                         <option value>Selecciona un proveedor</option>
 
-                        <option v-for="(vd,index) in vendors" :value="vd.id">{{ vd.name }}</option>
+                        <option v-for="(vd, index) in vendors" :value="vd.id">{{ vd.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -84,14 +66,8 @@
                       <i class="material-icons">playlist_add_check</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Chalan No:"
-                        title="Chalan No:"
-                        v-model="date"
-                        disabled
-                      />
+                      <input type="text" class="form-control" placeholder="Comprobante No:" title="Comprobante No:"
+                        v-model="date" disabled />
                     </div>
                   </div>
                 </div>
@@ -102,12 +78,8 @@
                       <i class="material-icons">attach_money</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Precio de compra"
-                        v-model="stock.buying_price"
-                      />
+                      <input type="text" class="form-control" placeholder="Precio de compra"
+                        v-model="stock.buying_price" />
                     </div>
                   </div>
                 </div>
@@ -118,12 +90,8 @@
                       <i class="material-icons">attach_money</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Precio de venta"
-                        v-model="stock.selling_price"
-                      />
+                      <input type="text" class="form-control" placeholder="Precio de venta"
+                        v-model="stock.selling_price" />
                     </div>
                   </div>
                 </div>
@@ -134,12 +102,7 @@
                       <i class="material-icons">add</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="number"
-                        class="form-control"
-                        placeholder="Cantidad"
-                        v-model="stock.quantity"
-                      />
+                      <input type="number" class="form-control" placeholder="Cantidad" v-model="stock.quantity" />
                     </div>
                   </div>
                 </div>
@@ -150,13 +113,7 @@
                       <i class="material-icons">assignment</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Nota"
-                        title="Nota"
-                        v-model="stock.note"
-                      />
+                      <input type="text" class="form-control" placeholder="Nota" title="Nota" v-model="stock.note" />
                     </div>
                   </div>
                 </div>
@@ -166,12 +123,8 @@
           <div class="modal-footer">
             <br />
             <button @click="createStock()" type="button" class="btn btn-success waves-effect">Agregar</button>
-            <button
-              @click="resetForm()"
-              type="button"
-              class="btn btn-default waves-effect"
-              data-dismiss="modal"
-            >Cerrar</button>
+            <button @click="resetForm()" type="button" class="btn btn-default waves-effect"
+              data-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
@@ -245,7 +198,7 @@ export default {
 
     //           if(this.stock.chalan_no.length <= 20 ){
 
-    //              this.stock.chalan_no = 'Chalan No:'+this.date;
+    //              this.stock.chalan_no = 'Comprobante No:'+this.date;
     //           }
 
     // },
@@ -265,6 +218,6 @@ export default {
 
   // end of method section
 
-  created() {},
+  created() { },
 };
 </script>

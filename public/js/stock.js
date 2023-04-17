@@ -38644,53 +38644,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -38756,7 +38709,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     //           if(this.stock.chalan_no.length <= 20 ){
 
-    //              this.stock.chalan_no = 'Chalan No:'+this.date;
+    //              this.stock.chalan_no = 'Comprobante No:'+this.date;
     //           }
 
     // },
@@ -39028,8 +38981,8 @@ var render = function() {
                             staticClass: "form-control",
                             attrs: {
                               type: "text",
-                              placeholder: "Chalan No:",
-                              title: "Chalan No:",
+                              placeholder: "Comprobante No:",
+                              title: "Comprobante No:",
                               disabled: ""
                             },
                             domProps: { value: _vm.date },
@@ -39476,30 +39429,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -39676,57 +39605,6 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vue_asset__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixin__ = __webpack_require__(6);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -40228,8 +40106,8 @@ var render = function() {
                             staticClass: "form-control",
                             attrs: {
                               type: "text",
-                              placeholder: "Chalan No:",
-                              title: "Chalan No:",
+                              placeholder: "Comprobante No:",
+                              title: "Comprobante No:",
                               disabled: ""
                             },
                             domProps: { value: _vm.stock.chalan_no },
@@ -41281,7 +41159,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Proveedor")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Chalan")]),
+        _c("th", [_vm._v("Comprobante")]),
         _vm._v(" "),
         _c("th", [_vm._v("Existencia inicial")]),
         _vm._v(" "),

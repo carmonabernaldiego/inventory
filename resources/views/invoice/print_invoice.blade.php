@@ -62,7 +62,7 @@
             <tr>
               <th>Categoría</th>
               <th>Producto</th>
-              <th>Chalan</th>
+              <th>Comprobante</th>
               <th>Cantidad</th>
               <th>Precio por unidad</th>
               <th>Descuento</th>
