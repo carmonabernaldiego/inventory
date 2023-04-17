@@ -18,7 +18,7 @@
 			<div class="header">
 				<h2>
 					
-					Update Company Information
+					Modificar Información de la Empresa
 					
 				</h2>
 			</div>
@@ -47,7 +47,7 @@
 					
 					<div class="row">
 						<div class="col-md-6">
-                            <p>Company Name</p>
+                            <p>Nombre de la empresa</p>
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
@@ -60,7 +60,7 @@
                         </div>
 
 						<div class="col-md-6">
-                                <p>Company Address</p>
+                                <p>Dirección de la empresa</p>
                             <div class="input-group">
                                 
                                 <span class="input-group-addon">
@@ -73,7 +73,7 @@
                         </div>
                         
                         <div class="col-md-6">
-                                <p>Company Phone</p>
+                                <p>Teléfono de la empresa</p>
                             <div class="input-group">
                                
                                 <span class="input-group-addon">
@@ -88,7 +88,7 @@
 
 
 					<div class="row text-center">
-						<button type="submit" class="btn bg-teal">Update</button>
+						<button type="submit" class="btn bg-teal">Actualizar</button>
 					</div>
 
 

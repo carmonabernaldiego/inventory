@@ -38536,25 +38536,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -38691,7 +38672,10 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control date",
-                            attrs: { type: "text", placeholder: "Correo" },
+                            attrs: {
+                              type: "text",
+                              placeholder: "Correo electrónico"
+                            },
                             domProps: { value: _vm.vendor.email },
                             on: {
                               input: function($event) {
@@ -38819,7 +38803,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Informacion del Proveedor")]
+        [_vm._v("Informacion del proveedor")]
       )
     ])
   },
@@ -38852,7 +38836,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("note")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("home")])
     ])
   }
 ]
@@ -38924,32 +38908,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__UpdateVendor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__UpdateVendor_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -39239,32 +39197,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -39429,7 +39361,10 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control date",
-                            attrs: { type: "text", placeholder: "Correo" },
+                            attrs: {
+                              type: "text",
+                              placeholder: "Correo electrónico"
+                            },
                             domProps: { value: _vm.vendor.email },
                             on: {
                               input: function($event) {
@@ -39566,7 +39501,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Actualizar Informacion del Proveedor")]
+        [_vm._v("Actualizar Informacion del proveedor")]
       )
     ])
   },
@@ -39599,7 +39534,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("note")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("home")])
     ])
   }
 ]
@@ -39662,7 +39597,11 @@ var render = function() {
                 }
               ],
               staticClass: "form-control",
-              attrs: { type: "text", placeholder: "Correo", name: "" },
+              attrs: {
+                type: "text",
+                placeholder: "Correo electrónico",
+                name: ""
+              },
               domProps: { value: _vm.email },
               on: {
                 keyup: _vm.getData,
@@ -39791,7 +39730,7 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("Nombre")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Correo")]),
+        _c("th", [_vm._v("Correo electrónico")]),
         _vm._v(" "),
         _c("th", [_vm._v("Telefono")]),
         _vm._v(" "),

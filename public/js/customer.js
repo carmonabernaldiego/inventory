@@ -38638,25 +38638,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -38797,7 +38778,10 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control date",
-                            attrs: { type: "text", placeholder: "Correo" },
+                            attrs: {
+                              type: "text",
+                              placeholder: "Correo electrónico"
+                            },
                             domProps: { value: _vm.customer.email },
                             on: {
                               input: function($event) {
@@ -38925,7 +38909,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Cliente Nuevo")]
+        [_vm._v("Cliente nuevo")]
       )
     ])
   },
@@ -38958,7 +38942,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("note")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("home")])
     ])
   }
 ]
@@ -39030,27 +39014,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__UpdateCustomer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__UpdateCustomer_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -39319,24 +39282,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -39510,7 +39455,10 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control date",
-                            attrs: { type: "text", placeholder: "Correo" },
+                            attrs: {
+                              type: "text",
+                              placeholder: "Correo electrónico"
+                            },
                             domProps: { value: _vm.customer.email },
                             on: {
                               input: function($event) {
@@ -39643,7 +39591,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Actualizar Cliente")]
+        [_vm._v("Actualizar cliente")]
       )
     ])
   },
@@ -39676,7 +39624,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("note")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("home")])
     ])
   }
 ]
@@ -39877,7 +39825,7 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("Nombre")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Correo")]),
+        _c("th", [_vm._v("Correo electrónico")]),
         _vm._v(" "),
         _c("th", [_vm._v("Teléfono")]),
         _vm._v(" "),

@@ -3,14 +3,8 @@
     <div class="body">
       <div class="row">
         <div class="col-md-6">
-          <input
-            type="text"
-            class="form-control"
-            v-on:keyup="getData"
-            placeholder="Buscar por nombre"
-            name
-            v-model="name"
-          />
+          <input type="text" class="form-control" v-on:keyup="getData" placeholder="Buscar por nombre" name
+            v-model="name" />
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4"></div>
@@ -28,24 +22,18 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(value,index) in categorys.data">
+            <tr v-for="(value, index) in categorys.data">
               <td>{{ value.name }}</td>
               <td>
-                <button
-                  @click="editCategory(value.id)"
-                  type="button"
-                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="editCategory(value.id)" type="button"
+                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">edit</i>
                 </button>
               </td>
 
               <td>
-                <button
-                  @click="deleteCategory(value.id)"
-                  type="button"
-                  class="btn bg-pink btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="deleteCategory(value.id)" type="button"
+                  class="btn bg-pink btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">delete</i>
                 </button>
               </td>
@@ -67,7 +55,7 @@
 import { EventBus } from "../../vue-asset";
 import mixin from "../../mixin";
 
-import Updatecategory from "./Updatecategory.vue";
+import Updatecategory from "./UpdateCategory.vue";
 
 import Pagination from "../pagination/pagination.vue";
 
@@ -137,7 +125,7 @@ export default {
           cancelButtonText: "Cancelar",
           confirmButtonText: "¡Sí, eliminar!",
         },
-        () => {}
+        () => { }
       ).then((result) => {
         if (result.value) {
           axios.get(base_url + "category/delete/" + id).then((res) => {

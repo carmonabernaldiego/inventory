@@ -4,7 +4,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="defaultModalLabel">Informacion del Proveedor</h4>
+            <h4 class="modal-title" id="defaultModalLabel">Informacion del proveedor</h4>
           </div>
           <div class="modal-body">
             <div class="alert alert-danger" v-if="errors">
@@ -20,12 +20,7 @@
                       <i class="material-icons">person</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control date"
-                        placeholder="Nombre"
-                        v-model="vendor.name"
-                      />
+                      <input type="text" class="form-control date" placeholder="Nombre" v-model="vendor.name" />
                     </div>
                   </div>
                 </div>
@@ -36,12 +31,8 @@
                       <i class="material-icons">email</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control date"
-                        placeholder="Correo"
-                        v-model="vendor.email"
-                      />
+                      <input type="text" class="form-control date" placeholder="Correo electrónico"
+                        v-model="vendor.email" />
                     </div>
                   </div>
                 </div>
@@ -52,12 +43,7 @@
                       <i class="material-icons">phone</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control date"
-                        placeholder="Telefono"
-                        v-model="vendor.phone"
-                      />
+                      <input type="text" class="form-control date" placeholder="Telefono" v-model="vendor.phone" />
                     </div>
                   </div>
                 </div>
@@ -65,15 +51,10 @@
                 <div class="col-md-12">
                   <div class="input-group">
                     <span class="input-group-addon">
-                      <i class="material-icons">note</i>
+                      <i class="material-icons">home</i>
                     </span>
                     <div class="form-line">
-                      <input
-                        type="text"
-                        class="form-control date"
-                        placeholder="Dirección"
-                        v-model="vendor.address"
-                      />
+                      <input type="text" class="form-control date" placeholder="Dirección" v-model="vendor.address" />
                     </div>
                   </div>
                 </div>
@@ -138,6 +119,6 @@ export default {
 
   // end of method section
 
-  created() {},
+  created() { },
 };
 </script>

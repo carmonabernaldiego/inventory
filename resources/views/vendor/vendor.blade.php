@@ -2,7 +2,7 @@
 
 @section('title','Inventory | Proveedores')
 
-@section('page-title','Lista de Proveedores')
+@section('page-title','Lista de proveedores')
 
 @section('content')
 
@@ -16,7 +16,7 @@
             <div class="header">
                 <h2>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-vendor">
-                        Proveedor Nuevo
+                        Proveedor nuevo
                     </button>
                 </h2>
             </div>

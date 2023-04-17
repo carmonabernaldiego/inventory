@@ -2,7 +2,7 @@
 
 @section('title','Inventory | Productos')
 
-@section('page-title','Lista de Productos')
+@section('page-title','Lista de productos')
 
 @section('content')
 
@@ -16,7 +16,7 @@
             <div class="header">
                 <h2>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-product">
-                        Producto Nuevo
+                        Producto nuevo
                     </button>
                 </h2>
             </div>

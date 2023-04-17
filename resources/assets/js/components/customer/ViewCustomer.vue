@@ -3,47 +3,29 @@
     <div class="body">
       <div class="row">
         <div class="col-md-4">
-          <input
-            type="text"
-            class="form-control"
-            v-on:keyup="getData()"
-            placeholder="Buscar por nombre"
-           name=""
-            v-model="name"
-          >
+          <input type="text" class="form-control" v-on:keyup="getData()" placeholder="Buscar por nombre" name=""
+            v-model="name">
         </div>
         <div class="col-md-4">
-          <input
-            type="text"
-            class="form-control"
-            v-on:keyup="getData()"
-            placeholder="Buscar por correo"
-            name=""
-            v-model="email"
-           >
+          <input type="text" class="form-control" v-on:keyup="getData()" placeholder="Buscar por correo" name=""
+            v-model="email">
         </div>
         <div class="col-md-4">
-              <input
-            type="text"
-            class="form-control"
-            v-on:keyup="getData()"
-            placeholder="Buscar por teléfono"
-            name=""
-            v-model="phone"
-              >
+          <input type="text" class="form-control" v-on:keyup="getData()" placeholder="Buscar por teléfono" name=""
+            v-model="phone">
         </div>
       </div>
 
-       <div class="loading" v-if="isLoading">
-                    <h2 style="text-align:center">Cargando.......</h2>
-        </div>
+      <div class="loading" v-if="isLoading">
+        <h2 style="text-align:center">Cargando.......</h2>
+      </div>
 
       <div class="table-responsive" v-else>
         <table class="table table-condensed table-hover">
           <thead>
             <tr>
               <th>Nombre</th>
-              <th>Correo</th>
+              <th>Correo electrónico</th>
               <th>Teléfono</th>
               <th>Dirección</th>
               <th>Importe comprado</th>
@@ -53,20 +35,17 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(value,index) in customers.data" v-bind:key="index">
+            <tr v-for="(value, index) in customers.data" v-bind:key="index">
               <td>{{ value.customer_name }}</td>
               <td>{{ value.email }}</td>
               <td>{{ value.phone }}</td>
               <td>{{ value.address }}</td>
               <td>{{ value.total_amount }}</td>
               <td>{{ value.total_paid_amount }}</td>
-              <td>{{ value.total_amount-value.total_paid_amount }}</td>
+              <td>{{ value.total_amount - value.total_paid_amount }}</td>
               <td>
-                <button
-                  @click="editcustomer(value.id)"
-                  type="button"
-                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float"
-                >
+                <button @click="editcustomer(value.id)" type="button"
+                  class="btn bg-blue btn-circle waves-effect waves-circle waves-float">
                   <i class="material-icons">edit</i>
                 </button>
               </td>
@@ -75,7 +54,7 @@
         </table>
       </div>
 
-       <pagination :pageData="customers"></pagination>
+      <pagination :pageData="customers"></pagination>
 
       <div class="row">
         <update-customer></update-customer>
@@ -89,7 +68,7 @@ import { EventBus } from "../../vue-asset";
 import mixin from "../../mixin";
 
 import UpdateCustomer from "./UpdateCustomer.vue";
-import Pagination  from '../pagination/pagination.vue';
+import Pagination from '../pagination/pagination.vue';
 
 export default {
   mixins: [mixin],
@@ -105,14 +84,14 @@ export default {
       name: "",
       email: "",
       phone: "",
-      isLoading : true,
+      isLoading: true,
     };
   },
   created() {
     var _this = this;
     this.getData();
 
-    EventBus.$on("customer-created", function() {
+    EventBus.$on("customer-created", function () {
       _this.getData();
     });
   },
@@ -123,14 +102,14 @@ export default {
       axios
         .get(
           base_url +
-            "customer-list?page="+
-            page+
-            "&name=" +
-            this.name +
-            "&email=" +
-            this.email +
-            "&phone=" +
-            this.phone
+          "customer-list?page=" +
+          page +
+          "&name=" +
+          this.name +
+          "&email=" +
+          this.email +
+          "&phone=" +
+          this.phone
         )
         .then(response => {
           // console.log(response.data);

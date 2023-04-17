@@ -38540,22 +38540,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -38697,7 +38681,12 @@ var render = function() {
                               return _c(
                                 "option",
                                 { key: index, domProps: { value: value.id } },
-                                [_vm._v(_vm._s(value.name))]
+                                [
+                                  _vm._v(
+                                    _vm._s(value.name) +
+                                      "\n                    "
+                                  )
+                                ]
                               )
                             })
                           ],
@@ -38815,7 +38804,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Información de Producto")]
+        [_vm._v("Información del producto")]
       )
     ])
   },
@@ -38824,7 +38813,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("palette")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("category")])
     ])
   },
   function() {
@@ -38832,7 +38821,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("palette")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("inventory")])
     ])
   },
   function() {
@@ -39514,7 +39503,7 @@ var staticRenderFns = [
       _c(
         "h4",
         { staticClass: "modal-title", attrs: { id: "defaultModalLabel" } },
-        [_vm._v("Actualizar Información del Producto")]
+        [_vm._v("Actualizar información del producto")]
       )
     ])
   },
@@ -39523,7 +39512,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("palette")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("category")])
     ])
   },
   function() {
@@ -39531,7 +39520,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "input-group-addon" }, [
-      _c("i", { staticClass: "material-icons" }, [_vm._v("palette")])
+      _c("i", { staticClass: "material-icons" }, [_vm._v("inventory")])
     ])
   },
   function() {

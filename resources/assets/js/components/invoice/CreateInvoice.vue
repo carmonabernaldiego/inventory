@@ -10,11 +10,7 @@
         <h2 class="pull-left">Crear factura</h2>
 
         <h2 class="pull-right">
-          <a
-            href
-            @click.prevent="showInvoice"
-            class="btn bg-red btn-circle waves-effect waves-circle waves-float"
-          >
+          <a href @click.prevent="showInvoice" class="btn bg-red btn-circle waves-effect waves-circle waves-float">
             <i class="material-icons">close</i>
           </a>
         </h2>
@@ -35,10 +31,8 @@
                     <option :value="1">De la base de datos</option>
                     <option :value="2">Nuevo cliente</option>
                   </select>
-                  <span
-                    class="requiredField"
-                    v-if="(errors.hasOwnProperty('customer_type'))"
-                  >{{ (errors.hasOwnProperty('customer_type')) ? errors.customer_type[0] :'' }}</span>
+                  <span class="requiredField" v-if="(errors.hasOwnProperty('customer_type'))">{{
+                    (errors.hasOwnProperty('customer_type')) ? errors.customer_type[0] : '' }}</span>
                 </div>
               </div>
             </div>
@@ -50,16 +44,9 @@
                   <i class="material-icons">person</i>
                 </span>
                 <div class="form-line">
-                                <multiselect 
-                       v-model="invoice.customer_id"
-                        deselect-label=""
-                         track-by="id"
-                          label="customer_name"
-                          open-direction="bottom"
-                           placeholder="Seleccionar cliente"
-                            :options="customers" 
-                             :allow-empty="false">
-                             </multiselect>
+                  <multiselect v-model="invoice.customer_id" deselect-label="" track-by="id" label="customer_name"
+                    open-direction="bottom" placeholder="Seleccionar cliente" :options="customers" :allow-empty="false">
+                  </multiselect>
                   <!-- <select class="form-control select2" v-model="invoice.customer_id">
                     <option value>Customer List</option>
 
@@ -68,10 +55,8 @@
                       :value="customer.id"
                     >{{ customer.customer_name }}</option>
                   </select> -->
-                  <span
-                    class="requiredField"
-                    v-if="(errors.hasOwnProperty('customer_id'))"
-                  >{{ (errors.hasOwnProperty('customer_id')) ? errors.customer_id[0] :'' }}</span>
+                  <span class="requiredField" v-if="(errors.hasOwnProperty('customer_id'))">{{
+                    (errors.hasOwnProperty('customer_id')) ? errors.customer_id[0] : '' }}</span>
                 </div>
               </div>
             </div>
@@ -84,17 +69,9 @@
                   <i class="material-icons">person</i>
                 </span>
                 <div class="form-line">
-                  <input
-                    type="text"
-                    name
-                    class="form-control"
-                    placeholder="Nombre"
-                    v-model="invoice.customer_name"
-                  >
-                  <span
-                    class="requiredField"
-                    v-if="(errors.hasOwnProperty('customer_name'))"
-                  >{{ (errors.hasOwnProperty('customer_name')) ? errors.customer_name[0] :'' }}</span>
+                  <input type="text" name class="form-control" placeholder="Nombre" v-model="invoice.customer_name">
+                  <span class="requiredField" v-if="(errors.hasOwnProperty('customer_name'))">{{
+                    (errors.hasOwnProperty('customer_name')) ? errors.customer_name[0] : '' }}</span>
                 </div>
               </div>
             </div>
@@ -105,17 +82,10 @@
                   <i class="material-icons">email</i>
                 </span>
                 <div class="form-line">
-                  <input
-                    type="text"
-                    name
-                    class="form-control"
-                    placeholder="Correo"
-                    v-model="invoice.customer_email"
-                  >
-                  <span
-                    class="requiredField"
-                    v-if="(errors.hasOwnProperty('customer_email'))"
-                  >{{ (errors.hasOwnProperty('customer_email')) ? errors.customer_email[0] :'' }}</span>
+                  <input type="text" name class="form-control" placeholder="Correo electrónico"
+                    v-model="invoice.customer_email">
+                  <span class="requiredField" v-if="(errors.hasOwnProperty('customer_email'))">{{
+                    (errors.hasOwnProperty('customer_email')) ? errors.customer_email[0] : '' }}</span>
                 </div>
               </div>
             </div>
@@ -126,17 +96,9 @@
                   <i class="material-icons">phone</i>
                 </span>
                 <div class="form-line">
-                  <input
-                    type="text"
-                    name
-                    class="form-control"
-                    placeholder="Teléfono"
-                    v-model="invoice.customer_phone"
-                  >
-                  <span
-                    class="requiredField"
-                    v-if="(errors.hasOwnProperty('customer_phone'))"
-                  >{{ (errors.hasOwnProperty('customer_phone')) ? errors.customer_phone[0] :'' }}</span>
+                  <input type="text" name class="form-control" placeholder="Teléfono" v-model="invoice.customer_phone">
+                  <span class="requiredField" v-if="(errors.hasOwnProperty('customer_phone'))">{{
+                    (errors.hasOwnProperty('customer_phone')) ? errors.customer_phone[0] : '' }}</span>
                 </div>
               </div>
             </div>
@@ -147,12 +109,8 @@
                   <i class="material-icons">note</i>
                 </span>
                 <div class="form-line">
-                  <textarea
-                    rows="1"
-                    class="form-control no-resize auto-growth"
-                    placeholder="Dirección"
-                    v-model="invoice.customer_address"
-                  ></textarea>
+                  <textarea rows="1" class="form-control no-resize auto-growth" placeholder="Dirección"
+                    v-model="invoice.customer_address"></textarea>
                 </div>
               </div>
             </div>
@@ -166,13 +124,7 @@
                   <i class="material-icons">person</i>
                 </span>
                 <div class="form-line">
-                  <input
-                    class="form-control"
-                    type="text"
-                    disabled
-                    name
-                    v-model="invoice.invoice_no"
-                  >
+                  <input class="form-control" type="text" disabled name v-model="invoice.invoice_no">
                 </div>
               </div>
             </div>
@@ -184,18 +136,12 @@
                   <i class="material-icons">person</i>
                 </span>
                 <div class="form-line">
-                  <vuejs-datepicker
-                    :input-class="'form-control'"
-                    :format="'yyyy-MM-dd'"
-                    value-format="yyyy-MM-dd"
-                    v-model="invoice.invoice_date"
-                  ></vuejs-datepicker>
+                  <vuejs-datepicker :input-class="'form-control'" :format="'yyyy-MM-dd'" value-format="yyyy-MM-dd"
+                    v-model="invoice.invoice_date"></vuejs-datepicker>
                   <!--       <input id="datep" class="form-control" 
                   type="text"  name="" v-model="invoice.invoice_date">-->
-                  <span
-                    class="requiredField"
-                    v-if="(errors.hasOwnProperty('invoice_date'))"
-                  >{{ (errors.hasOwnProperty('invoice_date')) ? errors.invoice_date[0] :'' }}</span>
+                  <span class="requiredField" v-if="(errors.hasOwnProperty('invoice_date'))">{{
+                    (errors.hasOwnProperty('invoice_date')) ? errors.invoice_date[0] : '' }}</span>
                 </div>
               </div>
             </div>
@@ -220,7 +166,7 @@
                 </thead>
 
                 <tbody>
-                  <tr v-for="(vl,index) in invoice.product">
+                  <tr v-for="(vl, index) in invoice.product">
                     <td>
                       <a href @click.prevent="removeItem(index)" style="color: red">
                         <i class="material-icons">delete</i>
@@ -241,21 +187,12 @@
                          {{ value.name }}
                          </option>
                       </select> -->
-                       <multiselect 
-                       v-model="invoice.product[index].category"
-                        deselect-label=""
-                         track-by="id"
-                          label="name"
-                          open-direction="bottom"
-                           placeholder="Selecciona categoría"
-                            :options="categorys" 
-                             @input="findProduct(index)"
-                             :allow-empty="false">
-                             </multiselect>
-                      <span
-                        v-if="errors['product.'+index+'.category']"
-                        class="requiredField"
-                      >{{ errors['product.'+index+'.category'][0] }}</span>
+                      <multiselect v-model="invoice.product[index].category" deselect-label="" track-by="id" label="name"
+                        open-direction="bottom" placeholder="Selecciona categoría" :options="categorys"
+                        @input="findProduct(index)" :allow-empty="false">
+                      </multiselect>
+                      <span v-if="errors['product.' + index + '.category']" class="requiredField">{{
+                        errors['product.' + index + '.category'][0] }}</span>
                     </td>
 
                     <td>
@@ -268,88 +205,51 @@
 
                         <option v-for="pr in vl.products" :value="pr.id">{{ pr.product_name }}</option>
                       </select> -->
-                                  <multiselect 
-                       v-model="invoice.product[index].product_id"
-                        deselect-label=""
-                         track-by="id"
-                          label="product_name"
-                          open-direction="bottom"
-                           placeholder="Seleccionar producto"
-                            :options="invoice.product[index].products" 
-                             @input="findStock(index)"
-                             :allow-empty="false">
-                             </multiselect>
-                      <span
-                        v-if="errors['product.'+index+'.product_id']"
-                        class="requiredField"
-                      >{{ errors['product.'+index+'.product_id'][0] }}</span>
+                      <multiselect v-model="invoice.product[index].product_id" deselect-label="" track-by="id"
+                        label="product_name" open-direction="bottom" placeholder="Seleccionar producto"
+                        :options="invoice.product[index].products" @input="findStock(index)" :allow-empty="false">
+                      </multiselect>
+                      <span v-if="errors['product.' + index + '.product_id']" class="requiredField">{{
+                        errors['product.' + index + '.product_id'][0] }}</span>
                     </td>
 
                     <td>
-                      <select
-                        class="form-control"
-                        v-model="invoice.product[index].chalan_id"
-                        @change="findStockDetails(index)"
-                      >
+                      <select class="form-control" v-model="invoice.product[index].chalan_id"
+                        @change="findStockDetails(index)">
                         <option value>Seleccionar Chalan</option>
-                        <option v-for="(ch,ch_index) in vl.stocks" :value="ch.id">
+                        <option v-for="(ch, ch_index) in vl.stocks" :value="ch.id">
                           {{
-                          ch.chalan_no }}. qty({{ ch.current_quantity }})
+                            ch.chalan_no }}. qty({{ ch.current_quantity }})
                         </option>
                       </select>
-                      
-                      <span
-                        v-if="errors['product.'+index+'.chalan_id']"
-                        class="requiredField"
-                      >{{ errors['product.'+index+'.chalan_id'][0] }}</span>
+
+                      <span v-if="errors['product.' + index + '.chalan_id']" class="requiredField">{{
+                        errors['product.' + index + '.chalan_id'][0] }}</span>
                     </td>
 
                     <td>
-                      <input
-                        class="form-control"
-                        type="number"
-                        @change="CheckStock(index)"
-                        name
-                        v-model="invoice.product[index].quantity"
-                        v-bind:disabled="vl.chalan_id === ''"
-                        placeholder="Cantidad"
-                      >
-                      
-                      <span
-                        v-if="errors['product.'+index+'.quantity']"
-                        class="requiredField"
-                      >{{ errors['product.'+index+'.quantity'][0] }}</span>
+                      <input class="form-control" type="number" @change="CheckStock(index)" name
+                        v-model="invoice.product[index].quantity" v-bind:disabled="vl.chalan_id === ''"
+                        placeholder="Cantidad">
+
+                      <span v-if="errors['product.' + index + '.quantity']" class="requiredField">{{
+                        errors['product.' + index + '.quantity'][0] }}</span>
                     </td>
 
                     <td>
-                      <input
-                        class="form-control"
-                        type="text"
-                        name
-                        v-model="invoice.product[index].price"
-                        placeholder="Precio"
-                        value
-                      >
-                      
-                      <span
-                        v-if="errors['product.'+index+'.price']"
-                        class="requiredField"
-                      >{{ errors['product.'+index+'.price'][0] }}</span>
+                      <input class="form-control" type="text" name v-model="invoice.product[index].price"
+                        placeholder="Precio" value>
+
+                      <span v-if="errors['product.' + index + '.price']" class="requiredField">{{
+                        errors['product.' + index + '.price'][0] }}</span>
                     </td>
 
                     <td>
-                      <input
-                        class="form-control"
-                        type="text"
-                        name
-                        v-model.double="invoice.product[index].discount"
-                        placeholder="Descuento"
-                      >
-                      
-                      <span
-                        v-if="errors['product.'+index+'.discount']"
-                        class="requiredField"
-                      >{{ errors['product.'+index+'.discount'][0] }}</span>
+                      <input class="form-control" type="text" name v-model.double="invoice.product[index].discount"
+                        placeholder="Descuento">
+
+                      <span v-if="errors['product.' + index + '.discount']" class="requiredField">{{
+                        errors['product.' + index + '.discount'][0] }}</span>
                     </td>
 
                     <td>
@@ -360,20 +260,12 @@
                     </td>
 
                     <!-- for getting discount amount  -->
-                    <input
-                      type="hidden"
-                      :value="vl.discount_amount = discount(invoice.product[index].discount_type,invoice.product[index].discount,vl.total_price)"
-                    >
+                    <input type="hidden"
+                      :value="vl.discount_amount = discount(invoice.product[index].discount_type, invoice.product[index].discount, vl.total_price)">
 
                     <td>
-                      <input
-                        class="form-control"
-                        type="text"
-                        name
-                        placeholder="Total"
-                        disabled
-                        :value="vl.total_price = vl.quantity * vl.price - vl.discount_amount"
-                      >
+                      <input class="form-control" type="text" name placeholder="Total" disabled
+                        :value="vl.total_price = vl.quantity * vl.price - vl.discount_amount">
                     </td>
                   </tr>
                 </tbody>
@@ -389,7 +281,7 @@
           <!-- main invoice part  -->
           <div class="row">
 
-            <div class="col-md-12" style="margin-top: 20px" >
+            <div class="col-md-12" style="margin-top: 20px">
               <div class="form-group">
                 <label>Precio total: &nbsp;</label>
                 <div class="input-group focused">
@@ -422,13 +314,8 @@
                 <div class="input-group focused">
                   <div class="input-group-addon">$</div>
 
-                  <input
-                    type="text"
-                    class="form-control"
-                    v-model="invoice.paid_amount"
-                    placeholder="Pay Now"
-                    style="border-bottom: 1px solid #ccc;"
-                  >
+                  <input type="text" class="form-control" v-model="invoice.paid_amount" placeholder="Pay Now"
+                    style="border-bottom: 1px solid #ccc;">
                 </div>
               </div>
 
@@ -448,13 +335,8 @@
                 <div class="input-group focused">
                   <div class="input-group-addon"></div>
 
-                  <textarea
-                    rows="1"
-                    class="form-control no-resize auto-growth"
-                    placeholder="Bank Information"
-                    v-model="invoice.bank_info"
-                    style="border-bottom: 1px solid #ccc;"
-                  ></textarea>
+                  <textarea rows="1" class="form-control no-resize auto-growth" placeholder="Bank Information"
+                    v-model="invoice.bank_info" style="border-bottom: 1px solid #ccc;"></textarea>
                 </div>
               </div>
 
@@ -462,7 +344,7 @@
                 <label>Importe a deber</label>
                 <div class="input-group focused">
                   <div class="input-group-addon">$</div>
-                  <label>{{ invoice.grand_total-invoice.paid_amount }}</label>
+                  <label>{{ invoice.grand_total - invoice.paid_amount }}</label>
                 </div>
               </div>
 
@@ -492,7 +374,7 @@ export default {
 
   components: {
     "vuejs-datepicker": Datepicker,
-     Multiselect
+    Multiselect
   },
 
   data() {
@@ -519,7 +401,7 @@ export default {
             chalan: "",
             chalan_id: "",
             stock_quantity: 0,
-            current_quantity : 0,
+            current_quantity: 0,
             quantity: 0,
             price: 0,
             total_price: 0,
@@ -537,7 +419,7 @@ export default {
     };
   },
 
-  created() {},
+  created() { },
 
   methods: {
     store() {
@@ -572,8 +454,8 @@ export default {
         axios
           .get(
             base_url +
-              "category/product/" +
-              this.invoice.product[index].category.id
+            "category/product/" +
+            this.invoice.product[index].category.id
           )
           .then(response => {
             this.invoice.product[index].products = response.data;
@@ -589,8 +471,8 @@ export default {
         axios
           .get(
             base_url +
-              "chalan-list/chalan/" +
-              this.invoice.product[index].product_id.id
+            "chalan-list/chalan/" +
+            this.invoice.product[index].product_id.id
           )
           .then(response => {
             this.invoice.product[index].stocks = response.data;
@@ -611,21 +493,21 @@ export default {
             this.invoice.product[index].price = response.data.selling_price;
             this.invoice.product[index].discount = response.data.discount;
             this.invoice.product[index].stock_quantity =
-              response.data.stock_quantity; 
-          this.invoice.product[index].current_quantity =
+              response.data.stock_quantity;
+            this.invoice.product[index].current_quantity =
               response.data.current_quantity;
           });
       }
     },
 
-    CheckStock(product_index){
+    CheckStock(product_index) {
 
-        if(this.invoice.product[product_index].quantity > this.invoice.product[product_index].current_quantity){
+      if (this.invoice.product[product_index].quantity > this.invoice.product[product_index].current_quantity) {
 
 
-            this.invoice.product[product_index].quantity = this.invoice.product[product_index].current_quantity;
+        this.invoice.product[product_index].quantity = this.invoice.product[product_index].current_quantity;
 
-        }
+      }
     },
 
     showInvoice() {
@@ -661,7 +543,7 @@ export default {
       // setTimeout(function(){
       //   $("#cat"+index).select2();
       //  },100);
-    }, 
+    },
 
     removeItem(index) {
       var _this = this;
@@ -694,7 +576,7 @@ export default {
             chalan: "",
             chalan_id: "",
             stock_quantity: 0,
-            current_quantity : 0,
+            current_quantity: 0,
             quantity: 0,
             price: 0,
             total_price: 0,
@@ -715,7 +597,7 @@ export default {
         return parseFloat(discount).toFixed(2);
       }
     }
-    
+
   },
 
   // end of method section
@@ -723,7 +605,7 @@ export default {
   computed: {
     totalAmount() {
       let sum = 0;
-      this.invoice.product.forEach(function(item) {
+      this.invoice.product.forEach(function (item) {
         sum += item.total_price;
       });
 
@@ -732,7 +614,7 @@ export default {
 
     totalDiscount() {
       let sum = 0;
-      this.invoice.product.forEach(function(item) {
+      this.invoice.product.forEach(function (item) {
         sum = +sum + +item.discount_amount;
       });
 
@@ -745,7 +627,6 @@ export default {
 <style type="text/css">
 .requiredField {
   color: red;
-  
-}
 
+}
 </style>

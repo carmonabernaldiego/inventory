@@ -2,7 +2,7 @@
 
 @section('title','Inventory | Categorías')
 
-@section('page-title','Lista de Categorías')
+@section('page-title','Lista de categorías')
 
 @section('content')
 
@@ -18,7 +18,7 @@
             <div class="header">
                 <h2>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-category">
-                        Nueva Categoría
+                        Nueva categoría
                     </button>
                 </h2>
             </div>

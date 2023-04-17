@@ -41318,7 +41318,7 @@ exports = module.exports = __webpack_require__(179)(false);
 
 
 // module
-exports.push([module.i, "\n.requiredField {\r\n  color: red;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.requiredField {\r\n  color: red;\n}\r\n", ""]);
 
 // exports
 
@@ -41367,124 +41367,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuejs_datepicker__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_multiselect__ = __webpack_require__(244);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_multiselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_multiselect__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -42360,7 +42242,7 @@ var render = function() {
                             attrs: {
                               type: "text",
                               name: "",
-                              placeholder: "Correo"
+                              placeholder: "Correo electrónico"
                             },
                             domProps: { value: _vm.invoice.customer_email },
                             on: {
@@ -43560,6 +43442,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -43574,118 +43460,118 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-         props: ['categorys', 'customers'],
+  props: ['categorys', 'customers'],
 
-         mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin_js__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__moment_mixin_js__["a" /* default */]],
+  mixins: [__WEBPACK_IMPORTED_MODULE_1__mixin_js__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__moment_mixin_js__["a" /* default */]],
 
-         components: {
+  components: {
 
-                  //     'edit-stock' : editStock,
-                  'update-invoice': __WEBPACK_IMPORTED_MODULE_5__UpdateInvoice_vue___default.a,
-                  'create-payment': __WEBPACK_IMPORTED_MODULE_6__CreatePayment_vue___default.a,
-                  'view-payment': __WEBPACK_IMPORTED_MODULE_7__ViewPayment_vue___default.a,
-                  'vuejs-datepicker': __WEBPACK_IMPORTED_MODULE_4_vuejs_datepicker__["a" /* default */],
-                  'pagination': __WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue___default.a
+    //     'edit-stock' : editStock,
+    'update-invoice': __WEBPACK_IMPORTED_MODULE_5__UpdateInvoice_vue___default.a,
+    'create-payment': __WEBPACK_IMPORTED_MODULE_6__CreatePayment_vue___default.a,
+    'view-payment': __WEBPACK_IMPORTED_MODULE_7__ViewPayment_vue___default.a,
+    'vuejs-datepicker': __WEBPACK_IMPORTED_MODULE_4_vuejs_datepicker__["a" /* default */],
+    'pagination': __WEBPACK_IMPORTED_MODULE_3__pagination_pagination_vue___default.a
 
-         },
+  },
 
-         data: function data() {
+  data: function data() {
 
-                  return {
+    return {
 
-                           invoice_id: '',
-                           customer_id: '',
-                           start_date: new Date('2019-02-03'),
-                           end_date: '',
-                           invoices: [],
-                           format: 'yyyy-MM-dd',
-                           url: base_url + 'invoice/',
-                           isLoading: true
+      invoice_id: '',
+      customer_id: '',
+      start_date: new Date('2019-02-03'),
+      end_date: '',
+      invoices: [],
+      format: 'yyyy-MM-dd',
+      url: base_url + 'invoice/',
+      isLoading: true
 
-                  };
-         },
-         created: function created() {
+    };
+  },
+  created: function created() {
 
-                  // this.hello();
+    // this.hello();
 
-                  var _this = this;
-                  this.getData();
+    var _this = this;
+    this.getData();
 
-                  __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('invoice-created', function () {
-                           _this.getData();
-                  });
-         },
-
-
-         methods: {
-                  getData: function getData() {
-                           var _this2 = this;
-
-                           var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$on('invoice-created', function () {
+      _this.getData();
+    });
+  },
 
 
-                           this.isLoading = true;
-                           axios.get(base_url + "invoice-list?page=" + page + "&customer_id=" + this.customer_id + "&invoice_id=" + this.invoice_id + "&start_date=" + this.end_date + "&end_date=" + this.start_date).then(function (response) {
-                                    _this2.invoices = response.data;
-                                    _this2.isLoading = false;
-                           }).catch(function (error) {
+  methods: {
+    getData: function getData() {
+      var _this2 = this;
 
-                                    console.log(error);
-                           });
-                  },
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
 
 
-                  // edit vendor 
+      this.isLoading = true;
+      axios.get(base_url + "invoice-list?page=" + page + "&customer_id=" + this.customer_id + "&invoice_id=" + this.invoice_id + "&start_date=" + this.end_date + "&end_date=" + this.start_date).then(function (response) {
+        _this2.invoices = response.data;
+        _this2.isLoading = false;
+      }).catch(function (error) {
 
-                  editInvoice: function editInvoice(id) {
-
-                           __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('edit-invoice', id);
-                  },
-
-                  // delete vendor 
-
-                  deleteInvoice: function deleteInvoice(id) {
-                           var _this3 = this;
-
-                           Swal({
-                                    title: '¿Estás seguro?',
-                                    text: "¡No podrás revertir esto!",
-                                    type: 'warning',
-                                    showCancelButton: true,
-                                    confirmButtonColor: '#3085d6',
-                                    cancelButtonColor: '#d33',
-                                    cancelButtonText: "Cancelar",
-                                    confirmButtonText: '¡Sí, eliminar!'
-                           }, function () {}).then(function (result) {
-                                    if (result.value) {
-
-                                             axios.get(base_url + 'invoice/delete/' + id).then(function (res) {
-
-                                                      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('invoice-created', 1);
-
-                                                      _this3.successALert(res.data);
-                                             });
-                                    }
-                           });
-                  },
-                  CreatePayment: function CreatePayment(id) {
-
-                           __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('create-payment', id);
-                  },
-                  ViewPayment: function ViewPayment(id) {
-
-                           __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('view-payment', id);
-                  },
+        console.log(error);
+      });
+    },
 
 
-                  // this function will called from pagination components 
-                  pageClicked: function pageClicked(pageNo) {
-                           var vm = this;
-                           vm.getData(pageNo);
-                  }
-         },
+    // edit vendor 
 
-         computed: {}
+    editInvoice: function editInvoice(id) {
+
+      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('edit-invoice', id);
+    },
+
+    // delete vendor 
+
+    deleteInvoice: function deleteInvoice(id) {
+      var _this3 = this;
+
+      Swal({
+        title: '¿Estás seguro?',
+        text: "¡No podrás revertir esto!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancelar",
+        confirmButtonText: '¡Sí, eliminar!'
+      }, function () {}).then(function (result) {
+        if (result.value) {
+
+          axios.get(base_url + 'invoice/delete/' + id).then(function (res) {
+
+            __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('invoice-created', 1);
+
+            _this3.successALert(res.data);
+          });
+        }
+      });
+    },
+    CreatePayment: function CreatePayment(id) {
+
+      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('create-payment', id);
+    },
+    ViewPayment: function ViewPayment(id) {
+
+      __WEBPACK_IMPORTED_MODULE_0__vue_asset__["EventBus"].$emit('view-payment', id);
+    },
+
+
+    // this function will called from pagination components 
+    pageClicked: function pageClicked(pageNo) {
+      var vm = this;
+      vm.getData(pageNo);
+    }
+  },
+
+  computed: {}
 
 });
 
@@ -46307,9 +46193,9 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                 " +
+                              "\n              " +
                                 _vm._s(value.total_amount - value.paid_amount) +
-                                "\n               "
+                                "\n            "
                             )
                           ]
                         ),

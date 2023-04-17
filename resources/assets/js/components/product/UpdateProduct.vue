@@ -4,7 +4,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="defaultModalLabel">Actualizar Información del Producto</h4>
+            <h4 class="modal-title" id="defaultModalLabel">Actualizar información del producto</h4>
           </div>
           <div class="modal-body">
             <div class="alert alert-danger" v-if="errors">
@@ -17,7 +17,7 @@
                 <div class="col-md-12">
                   <div class="input-group">
                     <span class="input-group-addon">
-                      <i class="material-icons">palette</i>
+                      <i class="material-icons">category</i>
                     </span>
                     <div class="form-line">
                       <select class="form-control select2" v-model="product.category" v-select="product.category"
@@ -33,7 +33,7 @@
                 <div class="col-md-12">
                   <div class="input-group">
                     <span class="input-group-addon">
-                      <i class="material-icons">palette</i>
+                      <i class="material-icons">inventory</i>
                     </span>
                     <div class="form-line">
                       <input type="text" class="form-control date" placeholder="Nombre" v-model="product.name" />
